@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <link rel="icon" href="res/images/favicon.ico">
     <title>My Dashboard</title>
+    <style>
+table, tr, td {
+border: solid 1px black;
+border-collapse: collapse;
+}
+</style>
+
 </head>
 
 <body>
@@ -28,51 +35,28 @@
 <section>
 
     <h1>Courses</h1>
-
     <table>
-
         <thead>
-
         <tr>
-
             <th>#</th>
-
             <th>Course Title</th>
-
             <th>Semester</th>
-
             <th>Grade</th>
-
         </tr>
-
         </thead>
-
         <tbody>
-
         <tr>
-
             <td>1</td>
-
-            <td>Agile software development</td>
-
+            <td><a href="https://courses.cs.ut.ee/2020/DAA/fall" Agile software development</td>
             <td>Semester 1 fall</td>
-
             <td>82</td>
-
         </tr>
-
         <tr>
-
             <td>2</td>
-
             <td>System modeling</td>
-
             <td>Semester 1 spring</td>
-
             <td>85</td>
-
         </tr>
-
         <tr>
             <td>3</td>
             <td>Object-oriented programming</td>
@@ -86,12 +70,52 @@
           <td>65</td>
         </tr>
         </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">
+              <button>Add new course</button>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+            <form>
+              <label for="title"> Enter the title</label>
+              <input type="text" placeholder="Enter the title..." name="title">
+              <hr>
+              <label for="semester">Semester</label>
+              <select id="semester">
+                <option disabled selected>Please select the semester</option>
+                <option name"fall" label="Fall"></option>
+                <option name"spring" label="Spring"></option>
+              </select>
+              <hr>
+              <label for="grade">Grade</label>
+              <input id="grade" placeholder="Grade" type="number" name="grade" min="0" max ="100">
+              <hr>
+                            <label for="radio1">Radio1</label>
+                            <input id="radio1" type="radio" name="semester-option" value="Radio1">
+                            <br>
+                            <label for="radio2">Radio2</label>
+                            <input id="radio2" type="radio" name="semester-option" value="Radio2">
+                            <hr>
+                            <label for="check1">Check1</label>
+                            <input id="check1" type="checkbox" name="check1" value="Check1">
+                            <br>
+                            <label for="check2">Check2</label>
+                            <input id="check2" type="checkbox" name="check2" value="Check2">
+                            <hr>
+                            <button type="submit">Add</button>
+
+            </form>
+            </td>
+          </tr>
+        </tfoot>
     </table>
 </section>
 <footer>
     <ul>
         <li>
-            <a href="https://ois2.ut.ee/">OIS</a>
+            <a target="_blank" href="https://ois2.ut.ee/">OIS</a>
         </li>
         <li>
             <a href="https://courses.cs.ut.ee/">Courses</a>
